@@ -3,39 +3,62 @@ package th.mfu;
 import java.util.Date;
 
 public class Concert {
+
+    //TODO: add attributes
     private int id;
     private String title;
-    private String description;
+    private String performer;
     private Date date;
+    private String description;
 
-    // ✅ Default constructor (ต้องมี)
-    public Concert() {}
-
-    // ✅ Constructor ใช้ใน test (title, description)
+    public Concert() {
+    }
     public Concert(String title, String description) {
+        //TODO: set attributes
         this.title = title;
         this.description = description;
+
+    }
+ 
+    //TODO: add getters and setters for all attributes
+    // You can use Source action/generate getter setter function
+    public int getId() {
+        return id;
     }
 
-    // ✅ Constructor เต็ม (ใช้ใน production)
-    public Concert(int id, String title, String description, Date date) {
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
         this.title = title;
-        this.description = description;
+    }
+
+    public String getPerformer() {
+        return performer;
+    }
+
+    public void setPerformer(String performer) {
+        this.performer = performer;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
         this.date = date;
     }
 
-    // ===== Getters & Setters =====
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public String getDescription() {
+        return description;
+    }
 
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
-
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
-
-    public Date getDate() { return date; }
-    public void setDate(Date date) { this.date = date; }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
-
